@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My E-commerce Store</title>
+    
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Products 🛍️</h1>
+
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <h3 class="product-name">{{ product.name }}</h3>
+            <p class="product-desc">{{ product.description|truncatechars:100 }}</p>
+            <p class="product-price">$ {{ product.price }}</p>
+
+            <div class="btn-group">
+                <a href="{% url 'product_detail' product.id %}" class="btn details-btn">View Details</a>
+                <a href="{% url 'add_to_cart' product.id %}" class="btn cart-btn">Add to Cart</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'cart' %}" class="btn view-cart-btn">🛒 View Cart</a>
+</div>
+
+</body>
+</html>

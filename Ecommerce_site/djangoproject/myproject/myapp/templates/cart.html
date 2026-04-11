@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Your Cart 🛒</h1>
+
+    {% if cart_items %}
+    <table class="cart-table">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+
+        {% for item in cart_items %}
+        <tr>
+            <td class="product-name">{{ item.product.name }}</td>
+            <td class="quantity">{{ item.quantity }}</td>
+            <td class="price">${{ item.total }}</td>
+            <td>
+            <a href="{% url 'remove_from_cart' item.product.id %}" class="remove-btn">Remove</a>
+        </td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p class="total-price">
+        <strong>Total Price: ${{ total_price }}</strong>
+    </p>
+
+    <a href="{% url 'checkout' %}" class="btn checkout-btn">Checkout</a>
+
+    {% else %}
+    <p class="empty-cart">Your cart is empty 😢</p>
+    {% endif %}
+
+    <a href="{% url 'home' %}" class="btn back-btn">← Back to Home</a>
+</div>
+
+</body>
+</html>

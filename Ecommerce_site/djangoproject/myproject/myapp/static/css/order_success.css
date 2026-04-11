@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d4fc79, #96e6a1);
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.success-box {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+
+.title {
+    color: #44bd32;
+    margin-bottom: 15px;
+}
+
+
+.message {
+    font-size: 16px;
+    color: #555;
+}
+
+
+.order-id {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.order-id span {
+    color: #e84118;
+    font-weight: bold;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.home-btn {
+    background-color: #40739e;
+}
+
+.home-btn:hover {
+    background-color: #487eb0;
+}

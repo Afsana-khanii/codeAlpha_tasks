@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="product-detail-box">
+        <h1 class="product-title">{{ product.name }}</h1>
+
+        <div class="product-info">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+
+            <div class="product-text">
+                <p class="product-description">{{ product.description }}</p>
+                <p class="product-price">Price: ${{ product.price }}</p>
+
+                <div class="btn-group">
+                    <a href="{% url 'add_to_cart' product.id %}" class="btn cart-btn">Add to Cart</a>
+                    <a href="{% url 'home' %}" class="btn home-btn">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
