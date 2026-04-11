@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+
+.post-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.username {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.content {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+.post-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.post-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-btn {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.like-btn:hover {
+    text-decoration: underline;
+}
+
+
+.comments-section {
+    margin-top: 10px;
+}
+
+.comment {
+    background: #f1f1f1;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+.comment-form {
+    margin-top: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.comment-btn {
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.comment-btn:hover {
+    background-color: #2980b9;
+}
+
+.form-card {
+    background-color: white;
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+
+.submit-btn {
+    width: 100%;
+    background-color: #4CAF50;
+    font-size: 16px;
+}
+
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+}
+
+.back-link:hover {
+    color: #000;
+}
+
+
+.profile-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+
+.profile-username {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stat-label {
+    color: #777;
+    font-size: 14px;
+}
+
+
+.follow-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.follow-btn:hover {
+    background-color: #2980b9;
+}
+
+
+.section-title {
+    margin-top: 20px;
+    color: #333;
+}
+
+
+.no-posts {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+}

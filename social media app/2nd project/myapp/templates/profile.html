@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="profile-card">
+        <h2 class="profile-username">{{ user_obj.username }}</h2>
+
+        <div class="profile-stats">
+            <div>
+                <span class="stat-number">{{ followers_count }}</span>
+                <span class="stat-label">Followers</span>
+            </div>
+            <div>
+                <span class="stat-number">{{ following_count }}</span>
+                <span class="stat-label">Following</span>
+            </div>
+        </div>
+
+        {% if user != user_obj %}
+            <a href="{% url 'follow_user' user_obj.username %}" class="follow-btn">
+                {% if is_following %}
+                    Unfollow
+                {% else %}
+                    Follow
+                {% endif %}
+            </a>
+        {% endif %}
+    </div>
+
+    <hr>
+
+    
+    <h3 class="section-title">Posts</h3>
+
+    {% for post in posts %}
+        <div class="post-card">
+            <p class="content">{{ post.content }}</p>
+        </div>
+    {% empty %}
+        <p class="no-posts">No posts yet.</p>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
